@@ -10,22 +10,29 @@
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+        @media @tablet {
+            flex-direction: column;
+            align-items: center;
+        }
 
         nav {
-        display: flex;
-        width: @width/3;
-        justify-content: space-between;
-        padding-bottom: 10px;
-        a {
-            font-size: 1.1 * @rem;
-            margin: 10px 10px 10px 0px;
-            text-decoration: none;
-            color: black;
-            border-bottom: 2px solid transparent;
-        }
-        a:hover {
-            border-bottom: 2px solid black; 
-        }
+            display: flex;
+            width: @width/3;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            a {
+                font-size: 1.1 * @rem;
+                margin: 10px 10px 10px 0px;
+                text-decoration: none;
+                color: black;
+                border-bottom: 2px solid transparent;
+            }
+            a:hover {
+                border-bottom: 2px solid black; 
+            }
+            @media @tablet {
+                width: @width/2;
+              }
         }
     }
 }
